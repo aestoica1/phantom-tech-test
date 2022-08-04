@@ -1,21 +1,19 @@
 # Project Details
 
-Name: PhantomExerciseAlexStoica
-Date: 04/08/2022
-Author: Alexandra Stoica
-Repository Link: https://github.com/aestoica1/phantom-tech-test
+Name: PhantomExerciseAlexStoica <br/>
+Date: 04/08/2022<br/>
+Author: Alexandra Stoica<br/>
+Repository Link: https://github.com/aestoica1/phantom-tech-test<br/>
 Public Link: https://aestoica1.github.io/phantom-tech-test/
 
 # Purpose
 
 Web app where users can perform full CRUD on bookmarks and receive appropriate alerts when necessary (eg success, warning).
 
-# Solution's Design - Angular Application Structure
+# Solution's Design - Components
 
-# Components
-
-1. Bookmarks List Component - displays a list of 20 paginated bookmarks per page.
-   a) Bookmarks Details Component - displays details for the selected individual bookmark from the Bookmarks List Component. It also provides the option to edit and delete the selected bookmark.
+1. Bookmarks List Component - displays a list of 20 paginated bookmarks per page.<br/>
+   a) Bookmarks Details Component - displays details for the selected individual bookmark from the Bookmarks List Component. It also provides the option to edit and delete the selected bookmark.<br/>
    i) Edit Bookmark Component - shows an edit form to edit individual bookmarks.
 
 2. Add Bookmark Component - a form that allows users to submit a new bookmark. This has been included in the Bookmarks List Component’s UI.
