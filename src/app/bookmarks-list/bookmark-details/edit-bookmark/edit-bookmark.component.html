@@ -1,0 +1,54 @@
+<div class="row mt-4 mx-4">
+  <div class="col">
+    <button class="btn btn-secondary" [routerLink]="['/details', this.id]">
+      Back
+    </button>
+  </div>
+
+  <div class="row mt-4">
+    <h2>Edit Bookmark</h2>
+
+    <div
+      *ngIf="alert"
+      class="alert alert-warning alert-dismissible mx-2 mb-0 mt-4"
+      role="alert"
+    >
+      Bookmark already exists
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+        (click)="closeAlert()"
+      ></button>
+    </div>
+
+    <div>
+      <form
+        [formGroup]="editBookmarkForm"
+        (ngSubmit)="onSubmitEditBookmarkForm()"
+      >
+        <div class="mb-3">
+          <label class="form-label" for="link-url"></label>
+          <input
+            class="form-control"
+            type="url"
+            id="link-url"
+            placeholder="URL eg: https://www.google.com"
+            formControlName="linkUrl"
+            required
+          />
+          <button
+            [disabled]="
+              !editBookmarkForm!.valid || this.editBookmarkForm.pristine
+            "
+            class="btn btn-success mx-2 btn-sm"
+            type="submit"
+          >
+            Edit Bookmark
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

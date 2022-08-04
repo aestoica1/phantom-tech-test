@@ -1,0 +1,40 @@
+<div class="row mt-2 mx-4">
+  <h2>New Bookmark</h2>
+
+  <div
+    *ngIf="alert"
+    class="alert alert-warning alert-dismissible mx-2 mb-0 mt-4"
+    role="alert"
+  >
+    Bookmark already exists
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+      (click)="closeAlert()"
+    ></button>
+  </div>
+
+  <div>
+    <form [formGroup]="bookmarkForm" (ngSubmit)="onSubmitBookmarkForm()">
+      <div class="mb-2">
+        <input
+          class="form-control"
+          type="url"
+          id="link-url"
+          placeholder="URL eg: https://www.google.com"
+          formControlName="linkUrl"
+          required
+        />
+        <button
+          class="btn btn-success mt-2 btn-sm"
+          [disabled]="!bookmarkForm!.valid"
+          type="submit"
+        >
+          Add Bookmark
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
